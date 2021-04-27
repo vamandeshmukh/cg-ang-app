@@ -17,7 +17,8 @@ export class HeaderDataComponent implements OnInit {
 
   onChangeServerName(event: any) { // event: Event
     this.serverName = event.target.value;
-    console.log(event);
+    console.log(event.target.value);
+    console.log(event.target.name);
   }
 
 
