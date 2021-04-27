@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderDataComponent implements OnInit {
 
+  myData: string = "This is my data";
+
+  serverId: number = 10;
+  serverStatus: string = `On`;
+
+  getServerStatus(): string {
+    return this.serverStatus;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

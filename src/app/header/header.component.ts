@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   name: string = "Capgemini";
-  
+  phone: number = 1020;
   constructor() { }
 
   ngOnInit(): void {
