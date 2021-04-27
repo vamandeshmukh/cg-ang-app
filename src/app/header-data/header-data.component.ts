@@ -10,13 +10,19 @@ export class HeaderDataComponent implements OnInit {
   myData: string = "This is my data";
 
   serverId: number = 10;
+  serverName: string = ``; 
   serverStatus: string = `On`;
   addNewServer: boolean = false;
   serverAddStatus: string = `Not added.`;
 
+  onChangeServerName(event: any) { // event: Event
+    this.serverName = event.target.value;
+    console.log(event);
+  }
+
+
   onAddServer() {
     this.serverAddStatus = `Server added.`;
-
   }
 
   getServerStatus(): string {
