@@ -2,7 +2,11 @@
 
 <p> Server with the id {{ serverId }} is {{ getServerStatus() }}. </p>
 
-<button class="btn btn-primary" [disabled]="!addNewServer">Add Server</button>
+<button class="btn btn-primary" [disabled]="!addNewServer" 
+(click)="onAddServer()" >Add Server</button>
 
 <p> {{addNewServer}} </p>
+<p> {{ serverAddStatus }} </p>
+<!-- <app-header-data-child> </app-header-data-child> -->
 
+<!-- (event)="expression" -->
