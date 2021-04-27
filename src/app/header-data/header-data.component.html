@@ -2,7 +2,9 @@
 
 <p> Server with the id {{ serverId }} is {{ getServerStatus() }}. </p>
 
-<input type="text" class="form-control" (input)="onChangeServerName($event)" >
+<!-- <input type="text" class="form-control" (input)="onChangeServerName($event)" > -->
+
+<input type="text" class="form-control" [(ngModel)]="serverName">
 
 <p>{{ serverName }}</p>
 

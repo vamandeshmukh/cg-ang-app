@@ -10,7 +10,7 @@ export class HeaderDataComponent implements OnInit {
   myData: string = "This is my data";
 
   serverId: number = 10;
-  serverName: string = ``; 
+  serverName: string = `my server`; 
   serverStatus: string = `On`;
   addNewServer: boolean = false;
   serverAddStatus: string = `Not added.`;
