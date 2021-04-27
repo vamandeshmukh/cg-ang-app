@@ -11,12 +11,17 @@ export class HeaderDataComponent implements OnInit {
 
   serverId: number = 10;
   serverStatus: string = `On`;
+  addNewServer: boolean = false;
 
   getServerStatus(): string {
     return this.serverStatus;
   }
 
-  constructor() { }
+  constructor() {
+    setTimeout(() => {
+      this.addNewServer = true;
+    }, 5000);
+  }
 
   ngOnInit(): void {
   }
