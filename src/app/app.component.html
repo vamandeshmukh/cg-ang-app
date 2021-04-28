@@ -1,11 +1,28 @@
-
+<app-header></app-header>
 <div class="container">
-    <app-header></app-header>
-    <h1 class="display-2 text-info">Welcome</h1>
-    <p>Welcome to <span style="color: blue;">CG Ang</span> App.</p>
-    <app-footer></app-footer>
-    <app-footer></app-footer>
-    <app-footer></app-footer>
-    <app-footer></app-footer>
-</div>
+    <div class="container-fluid">
+        <div class="row content">
 
+            <div class="col-sm-2 sidenav border border-primary my-2 ">
+                <p class="display-4">Left side bar </p>
+                <p>Left side bar content</p>
+                <!-- <left-bar></left-bar> -->
+            </div>
+
+            <div class="col-sm-8 text-left">
+                <h1 class="display-2 text-info">Welcome</h1>
+                <p>Welcome to <span style="color: blue;">CG Ang</span> App.</p>
+                <p class="display-2">Main Content</p>
+                <p>Main content</p>
+                <!-- <main-content></main-content> -->
+                <app-header-data></app-header-data>
+            </div>
+            <div class="col-sm-2 sidenav border border-primary my-2 ">
+                <p class="display-4">Right side bar </p>
+                <p>Right side bar content</p>
+                <!-- <right-bar></right-bar> -->
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
