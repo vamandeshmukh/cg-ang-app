@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderDataComponent implements OnInit {
 
+  names = ['Sonu', 'Monu', 'Tonu'];
   myData: string = "This is my data";
   myBday = new Date();
 
