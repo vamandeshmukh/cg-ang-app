@@ -21,7 +21,7 @@ import { HeaderDataComponent } from './header-data/header-data.component';
     AppRoutingModule, 
     FormsModule
   ],
-  providers: [CgDataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

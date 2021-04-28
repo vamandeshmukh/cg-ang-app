@@ -24,9 +24,9 @@
 <label>Enter server name two way binding</label>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
-<p>{{ serverName }}</p>
+<button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
 
-<button class="btn btn-primary" (click)="setCurrentStyles()">Add Server</button>
+<p>{{ serverName }}</p>
 
 <p> {{addNewServer}} </p>
 <p> {{ serverAddStatus }} </p>
@@ -41,17 +41,12 @@
 
 <p *ngFor="let name of names">{{name}}</p>
 
-<p [ngStyle]="currentStyles">
-    This p is initially blue then red.
-</p>
+<p>Service and DI</p>
 
-<div [ngStyle]="{'background-color':addNewServer ? 'green' : 'red' }">Aaaa<div>
+<p> {{getCgData()}} </p>
 
-    <p>Service and DI</p>
-        <p> {{cgEmpData}} </p>
+<button class="btn btn-primary" (click)="setCurrentStyles()">Set Color</button>
 
+<p [ngStyle]="currentStyles">This p is initially black then red.</p>
 
-
-        <!-- <app-header-data-child> </app-header-data-child> -->
-
-        <!-- (event)="expression" -->
+<div [ngStyle]="{'background-color':addNewServer ? 'green' : 'red' }">Some more text<div></div>

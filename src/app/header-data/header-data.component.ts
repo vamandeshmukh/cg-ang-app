@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CgDataService} from '../cg-data.service';
+import { CgDataService } from '../cg-data.service';
 
 @Component({
   selector: 'app-header-data',
@@ -8,13 +8,15 @@ import {CgDataService} from '../cg-data.service';
 })
 export class HeaderDataComponent extends CgDataService implements OnInit {
 
-  // empData: string = cgEmpData;
 
-  currentStyles: {};
-  /* . . . */
+  currentStyles: {
+
+  };
+
   setCurrentStyles() {
     this.currentStyles = {
-      'font-color' : 'red'
+      'color': 'red',
+      'background-color': 'blue'
     };
   }
 
@@ -43,7 +45,7 @@ export class HeaderDataComponent extends CgDataService implements OnInit {
     return this.serverStatus;
   }
 
-  constructor() {
+  constructor(cgDataService: CgDataService) {
     super();
     console.log(`constrcutor`);
     setTimeout(() => {
