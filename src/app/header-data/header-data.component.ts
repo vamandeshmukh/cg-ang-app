@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CgDataService} from '../cg-data.service';
+
 @Component({
   selector: 'app-header-data',
   templateUrl: './header-data.component.html',
