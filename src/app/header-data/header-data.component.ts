@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CgDataService} from '../cg-data.service';
 @Component({
   selector: 'app-header-data',
   templateUrl: './header-data.component.html',
   styleUrls: ['./header-data.component.css']
 })
-export class HeaderDataComponent implements OnInit {
+export class HeaderDataComponent extends CgDataService implements OnInit {
+
+  // empData: string = cgEmpData;
 
   currentStyles: {};
   /* . . . */
@@ -41,6 +43,7 @@ export class HeaderDataComponent implements OnInit {
   }
 
   constructor() {
+    super();
     console.log(`constrcutor`);
     setTimeout(() => {
       this.addNewServer = true;
