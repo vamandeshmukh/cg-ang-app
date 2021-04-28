@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderDataComponent implements OnInit {
 
   myData: string = "This is my data";
+  myBday = new Date();
 
-  serverId: number = 10;
+  serverId: number = 1234567890;
   serverName: string = `my server`; 
   serverStatus: string = `On`;
   addNewServer: boolean = false;

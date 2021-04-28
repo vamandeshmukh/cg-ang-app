@@ -18,7 +18,8 @@ import { HeaderDataComponent } from './header-data/header-data.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule
+    , 
     FormsModule
   ],
   providers: [],

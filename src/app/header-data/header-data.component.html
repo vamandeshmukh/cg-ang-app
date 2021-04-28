@@ -1,17 +1,34 @@
-<p>header-data works!</p>
+<p class="display-4">header-data works!</p>
+
+<p>{{ myData  }}</p>
+<p>{{ myData | uppercase }}</p>
+<p>{{ myData | lowercase }}</p>
+<p>{{serverId | number}}</p>
+<p>{{serverId | currency}}</p>
+<p>{{serverId | currency:'USD'}}</p>
+<p>{{serverId | currency:'EUR'}}</p>
+<p>{{serverId | currency:'INR'}}</p>
+
+<p>{{myBday }}</p>
+<p>{{myBday | date }}</p>
+<p>{{myBday | date | uppercase}}</p>
+<p>{{myBday | date:'dd/MM/yyyy' }}</p>
+
+
+
+
 
 <p> Server with the id {{ serverId }} is {{ getServerStatus() }}. </p>
 
 <label>Enter server name property binding</label>
-<input type="text" class="form-control" (input)="onChangeServerName($event)" >
+<input type="text" class="form-control" (input)="onChangeServerName($event)">
 
 <label>Enter server name two way binding</label>
 <input type="text" class="form-control" [(ngModel)]="serverName">
 
 <p>{{ serverName }}</p>
 
-<button class="btn btn-primary" [disabled]="!addNewServer" 
-(click)="onAddServer()" >Add Server</button>
+<button class="btn btn-primary" [disabled]="!addNewServer" (click)="onAddServer()">Add Server</button>
 
 <p> {{addNewServer}} </p>
 <p> {{ serverAddStatus }} </p>
