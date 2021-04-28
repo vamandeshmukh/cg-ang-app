@@ -7,15 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderDataComponent implements OnInit {
 
+  currentStyles: {};
+  /* . . . */
+  setCurrentStyles() {
+    this.currentStyles = {
+      'font-color' : 'red'
+    };
+  }
+
   names = ['Sonu', 'Monu', 'Tonu'];
   myData: string = "This is my data";
   myBday = new Date();
 
   serverId: number = 1234567890;
-  serverName: string = `my server`; 
+  serverName: string = `my server`;
   serverStatus: string = `On`;
   addNewServer: boolean = false;
-  serverAddStatus: string = `Not added.`; 
+  serverAddStatus: string = `Not added.`;
 
   onChangeServerName(event: any) { // event: Event
     this.serverName = event.target.value;

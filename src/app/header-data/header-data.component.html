@@ -26,7 +26,7 @@
 
 <p>{{ serverName }}</p>
 
-<button class="btn btn-primary" [disabled]="!addNewServer" (click)="onAddServer()">Add Server</button>
+<button class="btn btn-primary" (click)="setCurrentStyles()">Add Server</button>
 
 <p> {{addNewServer}} </p>
 <p> {{ serverAddStatus }} </p>
@@ -37,12 +37,15 @@
 <p *ngIf="addNewServer; else noServer"> Server is added. </p>
 <!-- define here  -->
 
-
 <li *ngFor="let name of names">{{name}}</li>
 
 <p *ngFor="let name of names">{{name}}</p>
 
+<p [ngStyle]="currentStyles">
+    This p is initially blue then red.
+</p>
 
+<div [ngStyle]="{'background-color':addNewServer ? 'green' : 'red' }">Aaaa<div>
 
 <!-- <app-header-data-child> </app-header-data-child> -->
 
