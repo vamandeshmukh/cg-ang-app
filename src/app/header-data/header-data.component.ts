@@ -6,7 +6,7 @@ import { CgDataService } from '../cg-data.service';
   templateUrl: './header-data.component.html',
   styleUrls: ['./header-data.component.css']
 })
-export class HeaderDataComponent extends CgDataService implements OnInit {
+export class HeaderDataComponent implements OnInit {
 
 
   currentStyles: {
@@ -46,7 +46,6 @@ export class HeaderDataComponent extends CgDataService implements OnInit {
   }
 
   constructor(cgDataService: CgDataService) {
-    super();
     console.log(`constrcutor`);
     setTimeout(() => {
       this.addNewServer = true;
