@@ -11,10 +11,10 @@ import { Post } from '../models/Post';
 export class HeaderDataComponent implements OnInit {
 
   cgDataVar: string = this.cgDataService.getCgData();
-  empData: Employee = new Employee();
   mockData: Post = new Post();
-  emp: Employee[];
 
+  empData: Employee = new Employee();
+  
   constructor(private cgDataService: CgDataService) {
     console.log(`HeaderDataComponentConstrcutor`);
   }

@@ -10,13 +10,12 @@ import { Post } from './models/Post';
 })
 export class CgDataService {
 
-  private empApi: string = 'http://localhost:8090/employee/getThisEmp/';
-  private mockApi: string = 'https://jsonplaceholder.typicode.com/posts/2';
-
   private cgData: string = "This data is from CgDataService.";
+  private mockApi: string = 'https://jsonplaceholder.typicode.com/posts/2';
+  private empApi: string = 'http://localhost:8090/employee/getThisEmp/';
+
 
   constructor(private httpClient: HttpClient) { }
-
   // constructor() { }
 
   getCgData(): string {
@@ -26,9 +25,11 @@ export class CgDataService {
   getMockData(): Observable<any> {
     console.log('getMockData');
     return this.httpClient.get(this.mockApi);
+
   }
 
   getEmpById(id: number): Observable<any> {
+    console.log('getEmpById');
     // return this.httpClient.get(`${this.empApi}${id}`);
     return this.httpClient.get(`${this.empApi}101`);
   }
