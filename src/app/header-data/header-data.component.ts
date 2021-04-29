@@ -13,6 +13,7 @@ export class HeaderDataComponent implements OnInit {
   cgDataVar: string = this.cgDataService.getCgData();
   empData: Employee = new Employee();
   mockData: Post = new Post();
+  emp: Employee[];
 
   constructor(private cgDataService: CgDataService) {
     console.log(`HeaderDataComponentConstrcutor`);
