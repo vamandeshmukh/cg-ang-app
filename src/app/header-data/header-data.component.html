@@ -1,5 +1,12 @@
-<!-- <p class="display-4">header-data works!</p>
-<p>{{ myData  }}</p>
+<p class="display-4">header-data works!</p>
+
+<p> {{cgDataVar}} </p>
+
+
+
+<!-- 
+    
+    <p>{{ myData  }}</p>
 <p>{{ myData | uppercase }}</p>
 <p>{{ myData | lowercase }}</p>
 <p>{{serverId | number}}</p>
@@ -11,12 +18,13 @@
 <p>{{myBday }}</p>
 <p>{{myBday | date }}</p>
 <p>{{myBday | date | uppercase}}</p>
-<p>{{myBday | date:'dd/MM/yyyy' }}</p> -->
+<p>{{myBday | date:'dd/MM/yyyy' }}</p>
 
 
-
-
-<p> Server with the id {{ serverId }} is {{ getServerStatus() }}. </p>
+    
+    
+    
+    <p> Server with the id {{ serverId }} is {{ getServerStatus() }}. </p>
 
 <label>Enter server name property binding</label>
 <input type="text" class="form-control" (input)="onChangeServerName($event)">
@@ -31,11 +39,10 @@
 <p> {{addNewServer}} </p>
 <p> {{ serverAddStatus }} </p>
 
-<!-- <p *ngIf="addNewServer"> Server is added. </p> -->
-<!-- reference here  -->
+<p *ngIf="addNewServer"> Server is added. </p>
 <ng-template #noServer>Server is not added yet.</ng-template>
 <p *ngIf="addNewServer; else noServer"> Server is added. </p>
-<!-- define here  -->
+
 
 <li *ngFor="let name of names">{{name}}</li>
 
@@ -43,10 +50,8 @@
 
 <p>Service and DI</p>
 
-<!-- <p> {{getCgData()}} </p> -->
-
 <button class="btn btn-primary" (click)="setCurrentStyles()">Set Color</button>
 
 <p [ngStyle]="currentStyles">This p is initially black then red.</p>
 
-<div [ngStyle]="{'background-color':addNewServer ? 'green' : 'red' }">Some more text<div></div>
+<div [ngStyle]="{'background-color':addNewServer ? 'green' : 'red' }">Some more text<div></div> -->

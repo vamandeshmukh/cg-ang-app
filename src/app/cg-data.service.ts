@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class CgDataService {
 
   // http://localhost:8090/Employee
-  cgData: string = "Sonu";  
+
+  cgData: string = "This data is from CgDataService.";
 
   getCgData(): string {
     return this.cgData;
