@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CgDataService } from '../cg-data.service';
+import { Employee } from '../models/Employee';
+import { Post } from '../models/Post';
 
 @Component({
   selector: 'app-header-data',
@@ -9,9 +11,17 @@ import { CgDataService } from '../cg-data.service';
 export class HeaderDataComponent implements OnInit {
 
   cgDataVar: string = this.cgDataService.getCgData();
+  empData: Employee = new Employee();
+  mockData: Post = new Post();
 
   constructor(private cgDataService: CgDataService) {
-    console.log(`constrcutor`);
+    console.log(`HeaderDataComponentConstrcutor`);
+  }
+
+  ngOnInit(): void {
+    console.log('HeaderDataComponentngOnInit');
+    this.cgDataService.getMockData().subscribe(data => this.mockData = data);
+    this.cgDataService.getEmpById(101).subscribe(data => this.empData = data);
   }
 
   // constructor(private cgDataService: CgDataService) {
@@ -58,7 +68,6 @@ export class HeaderDataComponent implements OnInit {
   // }
 
 
-  ngOnInit(): void {
-  }
+
 
 }
