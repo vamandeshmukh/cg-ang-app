@@ -8,13 +8,21 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderDataComponent } from './header-data/header-data.component';
+import { LoginComponent } from './login/login.component';
+import { LeftBarComponent } from './left-bar/left-bar.component';
+import { RightBarComponent } from './right-bar/right-bar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HeaderDataComponent
+    HeaderDataComponent,
+    LoginComponent,
+    LeftBarComponent,
+    RightBarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
