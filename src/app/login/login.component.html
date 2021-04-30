@@ -1,1 +1,13 @@
-<p class="display-4">login works!</p>
+<div class="col-sm-4 mb-3 mt-4">
+    <form>
+        <img class="mb-3 mt-4"
+            src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
+            alt="" width="72" height="72">
+        <!-- <h1 class="mb-2 display-4">Please log in</h1> -->
+        <p class="mb-4 display-4">Please log in</p>
+        <input type="email" id="inputEmail" class="form-control mb-1" placeholder="Email address" required autofocus>
+        <input type="password" id="inputPassword" class="form-control mb-1" placeholder="Password" required>
+        <button class="btn btn-lg btn-primary btn-block mb-2" type="submit">Log in</button>
+    </form>
+    <p>Not yet registered? <a [routerLink]="['/register']">Register</a></p>
+</div>
