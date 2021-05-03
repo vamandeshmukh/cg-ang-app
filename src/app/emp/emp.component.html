@@ -4,9 +4,7 @@
             src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
             alt="" width="72" height="72">
         <p class="mb-4 display-4">Emp data</p>
-        <!-- <input type="text" class="form-group form-control mb-1" id="eid" required [(ngModel)]="emp.eid" name="eid"
-            #name="ngModel" placeholder="Eid" autofocus> -->
-        <input type="text" formControlName="eid" class="form-control mb-1" placeholder="Eid" required>
+        <input type="number" formControlName="eid" class="form-control mb-1" placeholder="Enter eid to search" required>
         <div class="text-danger" *ngIf="empForm.get('eid').invalid && (empForm.get('eid').touched)">
             Please enter a valid eid.
         </div>
@@ -27,7 +25,7 @@
             src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
             alt="" width="72" height="72">
         <p class="mb-4 display-4">Emp data</p>
-        <input type="text" class="form-group form-control mb-1" id="eid" required [(ngModel)]="emp.eid" name="eid"
+        <input type="number" class="form-group form-control mb-1" id="eid" required [(ngModel)]="emp.eid" name="eid"
             #name="ngModel" placeholder="Eid" autofocus>
         <button class="btn btn-lg btn-primary btn-block mb-2" type="submit">Search</button>
     </form>
