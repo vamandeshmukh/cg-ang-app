@@ -14,5 +14,4 @@ export class AuthenticationService {
   login(email: string, password: string) {
     return this.httpClient.post<User>('/api/login', { email, password });
   }
-
 }
