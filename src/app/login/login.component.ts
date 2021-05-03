@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/User';
-
-
+ 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -13,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log('onSubmitLoginComponent');
+    console.log(`Sign in successful with ${this.user.email} and ${this.user.password}.`);
     alert(`Sign in successful with ${this.user.email} and ${this.user.password}.`);
   }
 

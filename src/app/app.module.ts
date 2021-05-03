@@ -26,7 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     RightBarComponent,
     RegisterComponent,
     HomeComponent
-  ],
+  ], 
   imports: [
     BrowserModule,
     AppRoutingModule,

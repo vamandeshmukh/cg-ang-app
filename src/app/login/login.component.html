@@ -1,7 +1,8 @@
 <!-- Example of template driven form  -->
 
 <div class="col-sm-5">
-    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <!-- <form action="" method="GET"> -->
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
         <img class="mb-3 mt-4"
             src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
             alt="" width="72" height="72">
@@ -20,17 +21,16 @@
 <!-- Example of a basic form  -->
 
 <!-- <div class="col-sm-5 mb-3">
-    <form >
+    <form>
         <img class="mb-3 mt-4"
             src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
             alt="" width="72" height="72">
         <p class="mb-4 display-4">Please log in</p>
-        <input type="email" class="form-control mb-1" placeholder="Email address" required autofocus>
+        <input type="text" class="form-control mb-1">
+        <input type="email" class="form-control mb-1" placeholder="Email" required autofocus>
         <input type="password" class="form-control mb-1" placeholder="password" required>
         <button [routerLink]="['/home']" type="submit" class="btn btn-lg btn-primary btn-block mb-2">Log
             in</button>
     </form>
     <p>Not yet registered? <a [routerLink]="['/register']">Register</a></p>
 </div> -->
-
-

@@ -23,12 +23,14 @@ export class RegisterComponent implements OnInit {
     // });
 
     // using FormBuilder 
-    // this.userForm = this.formBuilder.group({
+    // this.userForm = this.formBuilder.group(
+    //   {
     //   name: '',
     //   email: '',
     //   password: '',
     //   confirmPassword: '',
-    // });
+    // }
+    // );
 
     // Adding Validators to from using FormBuilder 
     this.userForm = this.formBuilder.group({
