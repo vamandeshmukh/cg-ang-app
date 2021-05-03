@@ -1,0 +1,16 @@
+<div class="col-sm-5">
+    <form (ngSubmit)="onSubmit()">
+        <img class="mb-3 mt-4"
+            src="https://www.capgemini.com/us-en/wp-content/uploads/sites/4/2018/08/cropped-cropped-capgemini_logo_color_rgb.png"
+            alt="" width="72" height="72">
+        <p class="mb-4 display-4">Emp data</p>
+        <input type="text" class="form-group form-control mb-1" id="eid" required [(ngModel)]="emp.eid" name="eid"
+            #name="ngModel" placeholder="Eid" autofocus>
+        <button class="btn btn-lg btn-primary btn-block mb-2" type="submit">Search</button>
+    </form>
+    <div >
+        <p> {{emp.eid}} </p>
+        <p> {{emp.name}} </p>
+        <p> {{emp.salary}} </p>
+    </div>
+</div>
