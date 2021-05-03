@@ -13,8 +13,9 @@ import { LeftBarComponent } from './left-bar/left-bar.component';
 import { RightBarComponent } from './right-bar/right-bar.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { EmpComponent } from './emp/emp.component';
+import { BasicAuthHtppInterceptorService } from './services/basic-auth-htpp-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,11 @@ import { EmpComponent } from './emp/emp.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: BasicAuthHtppInterceptorService,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

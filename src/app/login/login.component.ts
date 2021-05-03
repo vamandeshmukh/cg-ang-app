@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/User';
- 
+import { AuthenticationService } from '../services/authentication.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,14 +10,16 @@ import { User } from '../models/User';
 export class LoginComponent implements OnInit {
 
   user: User = new User();
+  b: any;
 
   onSubmit() {
+    let data = this.authenticationService.authenticate(this.user.email, this.user.password);
     console.log('onSubmitLoginComponent');
     console.log(`Sign in successful with ${this.user.email} and ${this.user.password}.`);
     alert(`Sign in successful with ${this.user.email} and ${this.user.password}.`);
   }
 
-  constructor() { }
+  constructor(private authenticationService: AuthenticationService) { }
 
   ngOnInit() {
     console.log('ngOnInitLoginComponent');
