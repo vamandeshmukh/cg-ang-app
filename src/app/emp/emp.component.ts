@@ -10,21 +10,52 @@ import { EmpService } from '../services/emp.service';
   templateUrl: './emp.component.html',
   styleUrls: ['./emp.component.css']
 })
+
+// using reactive from 
 export class EmpComponent implements OnInit {
 
   emp: Employee = new Employee();
-  isEmpAvailable: boolean;
+  empForm: FormGroup;
+
+  constructor(
+    private empService: EmpService,
+    private formBuilder: FormBuilder
+  ) {
+    console.log('EmpComponent constructor');
+  }
+
+  onSubmit(form: FormGroup) {
+    this.empService.getEmpById(form.value.eid).subscribe(data => this.emp = data);
+  }
+
+  ngOnInit(): void {
+    console.log('EmpComponent.ngOnInit');
+    this.empForm = this.formBuilder.group({
+      eid: ['', Validators.required],
+    });
+  }
+}
+
+
+
+
+
+
+// using template driven form  
+/*
+export class EmpComponent implements OnInit {
+
+  emp: Employee = new Employee();
 
   constructor(private empService: EmpService, private formBuilder: FormBuilder) {
     console.log(`constrcutorEmpComponent`);
   }
 
   ngOnInit(): void {
-    this.isEmpAvailable = false;
     console.log('ngOnInitEmpComponent');
   }
   onSubmit() {
-    this.isEmpAvailable = true;
     this.empService.getEmpById(this.emp.eid).subscribe(data => this.emp = data);
   }
 }
+*/
