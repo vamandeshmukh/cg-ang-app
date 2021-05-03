@@ -8,13 +8,26 @@
         <div class="text-danger" *ngIf="empForm.get('eid').invalid && (empForm.get('eid').touched)">
             Please enter a valid eid.
         </div>
-        <button class="btn btn-lg btn-primary btn-block mb-2" type="submit">Search</button>
+        <button class="btn btn-lg btn-primary btn-block mb-2" type="submit" [disabled]="!empForm.valid">Search</button>
     </form>
-    <div *ngIf="empForm.valid">
-        <p>Emp Data</p>
-        <p> {{emp.eid}} </p>
-        <p> {{emp.name}} </p>
-        <p> {{emp.salary}} </p>
+    <div *ngIf="(emp.eid === empForm.value.eid)">
+        <p class="mb-4 display-4">Emp data is here</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Eid</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{emp.eid}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
