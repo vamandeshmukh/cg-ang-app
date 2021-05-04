@@ -10,7 +10,6 @@ import { AuthenticationService } from '../services/authentication.service';
 export class LoginComponent implements OnInit {
 
   user: User = new User();
-  b: any;
 
   onSubmit() {
     let data = this.authenticationService.authenticate(this.user.email, this.user.password);

@@ -14,15 +14,13 @@ export class BasicAuthHtppInterceptorService implements HttpInterceptor {
     console.log('intercept');
 
     // if (sessionStorage.getItem('username') && sessionStorage.getItem('token')) {
-      console.log('if');
       req = req.clone({
         setHeaders: {
-          Authorization: `Bearer ${sessionStorage.getItem('token')}`
+          Authorization:  localStorage.getItem('token') 
         }
       })
     // }
-
-    return next.handle(req);
+    return next.handle(req); 
 
   }
 }
